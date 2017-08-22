@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --open",
+    "build": "ng build --prod",
+    "build:universal": "npm run build && ng build --prod --app 1 --output-hashing none",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,7 +21,13 @@
     "@angular/http": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/platform-server": "^4.3.5",
     "@angular/router": "^4.2.4",
+    "@nguniversal/express-engine": "^1.0.0-beta.2",
+    "@webcomponents/custom-elements": "^1.0.0",
+    "clarity-angular": "^0.10.1",
+    "clarity-icons": "^0.10.1",
+    "clarity-ui": "^0.10.1",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"

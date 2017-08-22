@@ -1,16 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {ClarityModule} from 'clarity-angular';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule.withServerTransition({appId: 'linkcouch-screenshots'}),
+    ClarityModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
